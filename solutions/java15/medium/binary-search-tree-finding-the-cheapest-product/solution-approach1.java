@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-10-21, 10:13 a.m.
+// Technique   recursive-bst-left-traversal
+// Time        O(N log N) average, O(N^2) worst case
+// Space       O(N) worst case recursion stack
+// Insight     The algorithm identifies the minimum value in a binary search tree by recursively traversing the left child pointers until a node with no left child is reached.
+// Interview   Before: "I would perform an in-order traversal and pick the first element." After: "Since it is a BST, I can achieve O(H) time complexity by simply following the left child pointers to the leftmost node, where H is the tree height."
+// Pitfalls    (1) The implementation assumes the input size n is at least 1, as calling cheap on a null root would trigger a NullPointerException.  (2) The recursive buildbst method does not handle duplicate price values, effectively ignoring them during tree construction.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
