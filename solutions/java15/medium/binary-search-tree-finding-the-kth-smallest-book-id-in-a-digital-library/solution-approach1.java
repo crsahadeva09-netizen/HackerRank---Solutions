@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-10-22, 11:10 a.m.
+// Technique   recursive-in-order-traversal
+// Time        O(N)
+// Space       O(H)
+// Insight     The algorithm performs an in-order traversal of the binary search tree, incrementing a counter at each node until the counter matches the target rank k.
+// Interview   Before: "How do I find the Kth smallest element in a BST?" After: "Perform an in-order traversal, which visits nodes in ascending order. By maintaining a counter, we stop at the Kth node. This approach takes O(N) time and O(H) space, where H is the tree height."
+// Pitfalls    (1) Failing to handle the case where k exceeds the total number of nodes in the tree.  (2) Using a local variable for the counter instead of a class-level field, which prevents the count from persisting across recursive calls.  (3) Incorrectly assuming the tree is balanced, leading to O(N) space complexity in the worst-case scenario of a skewed tree.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
