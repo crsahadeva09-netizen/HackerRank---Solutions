@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-10-22, 11:47 a.m.
+// Technique   recursive-dfs-path-sum
+// Time        O(N log N) on average, O(N^2) worst case
+// Space       O(H) where H is tree height
+// Insight     The algorithm recursively subtracts the current node's value from the target sum and returns true if a leaf node is reached with a remaining target sum of zero.
+// Interview   Before: "How do I verify if a path sum exists?" After: "Perform a recursive DFS, subtracting node values from the target. A path is valid only if the target reaches zero exactly at a leaf node, resulting in O(N) time complexity for the traversal."
+// Pitfalls    (1) The code fails to identify a path if the target sum is reached at an internal node rather than a leaf node.  (2) The BST construction logic does not handle duplicate transaction values, which may lead to unexpected tree structures if duplicates are provided in the input.
 // ──────────────────────────────────────────────────
 
 import java.util.*;
