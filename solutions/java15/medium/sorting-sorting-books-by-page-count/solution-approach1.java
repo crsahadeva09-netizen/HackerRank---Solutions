@@ -7,6 +7,12 @@
 // Language    java15
 // Status      Accepted
 // Submitted   2026-10-26, 02:40 p.m.
+// Technique   selection-sort
+// Time        O(n^2)
+// Space       O(n)
+// Insight     The algorithm iteratively identifies the minimum element in the unsorted portion of the array and swaps it into the current position, effectively building the sorted sequence from left to right.
+// Interview   Before: "How would you implement a sorting algorithm for this list?" After: "I used selection sort, which has an O(n^2) time complexity. It repeatedly finds the smallest element in the remaining unsorted subarray and places it at the beginning, ensuring the list is sorted in ascending order."
+// Pitfalls    (1) The implementation uses selection sort instead of the requested bubble sort algorithm.  (2) The nested loop structure iterates up to n-1, which may cause an index out of bounds error if the input n is zero.
 // ──────────────────────────────────────────────────
 
 import java.io.*;
